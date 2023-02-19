@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Name = styled.p`
+export const Text = styled.p`
   width: 150px;
 `;
 

@@ -10,6 +10,7 @@ export class App extends Component {
     contacts: initialValue,
     filter: '',
   };
+
   addContact = contact => {
     this.setState(({ contacts }) => ({
       contacts: [...contacts, contact],
@@ -30,10 +31,10 @@ export class App extends Component {
 
   getFilteredContacts = () => {
     const { filter, contacts } = this.state;
-    const normalizedFilter = filter.toLowerCase().trim();
+    const normalizedValue = filter.toLowerCase().trim();
 
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter)
+      contact.name.toLowerCase().includes(normalizedValue)
     );
   };
 
@@ -63,7 +64,7 @@ export class App extends Component {
 
         <Section title="Contact List">
           <ContactList
-            filteredContacts={this.getFilteredContacts()}
+            contactList={this.getFilteredContacts()}
             onDelete={this.deleteContact}
           ></ContactList>
         </Section>

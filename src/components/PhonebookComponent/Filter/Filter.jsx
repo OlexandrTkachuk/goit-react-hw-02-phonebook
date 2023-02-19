@@ -14,6 +14,7 @@ export const Filter = ({ onChange, value, onClick }) => {
             onChange={onChange}
           />
         </label>
+
         <Button type="button" onClick={onClick}>
           Clear
         </Button>

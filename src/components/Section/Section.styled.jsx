@@ -11,9 +11,7 @@ export const Wrapper = styled.section`
   padding: 30px;
   background-color: lightblue;
 
-  :not(:last-child) {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 
   border-radius: 8px;
 `;

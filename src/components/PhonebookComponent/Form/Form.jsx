@@ -37,7 +37,9 @@ export class PhonebookForm extends Component {
     const contact = { id: nanoid(), name, number };
 
     const alreadyExists = contacts.findIndex(item => {
-      return item.name.toLowerCase() === contact.name.toLowerCase();
+      const name = item.name.toLowerCase();
+      const newName = contact.name.toLowerCase();
+      return name === newName;
     });
 
     if (alreadyExists >= 0) {
